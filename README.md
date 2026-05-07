@@ -3,6 +3,8 @@ Household AI Calendar Sync
 
 > A privacy-first, self-hosted AI-powered household calendar assistant that automatically organizes schedules from chat conversations.
 
+![](./Gemini_Generated_Image_ojzr4uojzr4uojzr.png)
+
 The system listens to household chats, extracts events, synchronizes calendars, detects conflicts, and generates intelligent summaries — while keeping all data local and secure using open-source software and local LLMs through Ollama.
 
 ---
