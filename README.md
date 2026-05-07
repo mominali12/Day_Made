@@ -90,7 +90,7 @@ Never leave your infrastructure.
 # 🏠 Self-Hosted
 
 Deploy on:
-- MacBook Pro
+- **MacBook Pro**
 - Raspberry Pi
 - Intel NUC
 - NAS
@@ -109,12 +109,8 @@ Each household member has:
 - Notification settings
 
 Supported calendars:
-- Nextcloud Calendar
-- CalDAV
-- Radicale
-- Google Calendar (optional)
-- Outlook (optional)
-
+- **Google Calendar**
+- Apple Calendar (optional)
 ---
 
 # ⚠️ Conflict Detection & Smart Suggestions
@@ -129,7 +125,7 @@ The system automatically:
 ```text
 ⚠️ Conflict detected
 
-Emma has football practice at 17:00
+Ali has football practice at 17:00
 while both parents are unavailable.
 
 Suggestions:
@@ -173,7 +169,7 @@ No available pickup at 17:00
 
 ```text
                ┌───────────────────┐
-               │ Matrix / Slack    │
+               │       Slack       │
                └─────────┬─────────┘
                          │
                          ▼
@@ -186,8 +182,8 @@ No available pickup at 17:00
               │ Rule-Based Parser   │
               └─────────┬───────────┘
                         │
-           High Confidence │ Low Confidence
-                           ▼
+        High Confidence │ Low Confidence
+                        ▼
                   ┌────────────────┐
                   │ Ollama + LLM   │
                   └────────┬───────┘
@@ -248,7 +244,6 @@ No available pickup at 17:00
 
 | Component | Technology |
 |---|---|
-| Shared Calendars | Nextcloud Calendar |
 | Calendar Protocol | CalDAV |
 | Scheduler | OR-Tools |
 | Date Parsing | Duckling |
@@ -259,9 +254,8 @@ No available pickup at 17:00
 
 | Component | Technology |
 |---|---|
-| Authentication | Keycloak |
-| Authorization | RBAC |
-| VPN Support | WireGuard / Tailscale |
+| Authentication |
+| Authorization |
 | HTTPS | Traefik + Let's Encrypt |
 
 ---
@@ -270,15 +264,7 @@ No available pickup at 17:00
 
 | Platform | Status |
 |---|---|
-| Matrix | ✅ |
 | Slack | ✅ |
-| Mattermost | ✅ |
-| Discord | Planned |
-| Signal | Planned |
-| WhatsApp | Limited* |
-
-> *WhatsApp support is limited due to Meta API restrictions and privacy concerns.
-
 ---
 
 # 📂 Project Structure
@@ -376,12 +362,7 @@ KEYCLOAK_ADMIN=
 KEYCLOAK_PASSWORD=
 
 OLLAMA_HOST=http://ollama:11434
-
-MATRIX_ACCESS_TOKEN=
-
-NEXTCLOUD_URL=
-NEXTCLOUD_USERNAME=
-NEXTCLOUD_PASSWORD=
+GOOGLE_CALENDAR_API=
 ```
 
 ---
@@ -422,7 +403,7 @@ Role-based permissions:
 - HTTPS everywhere
 - JWT authentication
 - Encrypted database connections
-- VPN-compatible deployment
+- VPN-compatible deployment (optional)
 - No external AI providers required
 
 ---
@@ -510,7 +491,6 @@ Example:
 Contributions are welcome.
 
 Areas needing help:
-- Matrix integrations
 - Scheduling optimization
 - Mobile applications
 - Security hardening
@@ -521,7 +501,7 @@ Areas needing help:
 
 # 📜 License
 
-MIT License
+CC BY Zero
 
 ---
 
