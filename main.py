@@ -20,6 +20,13 @@ print(f"SLACK_BOT_TOKEN: {os.getenv('SLACK_BOT_TOKEN')}")
 
 app = App(token=os.getenv("SLACK_BOT_TOKEN"))
 
+@app.event("team_join")
+def welcome_new_user(event, say):
+    user_id = event["user"]["id"]
+    print(f"New user joined: {user_id}")
+    welcome_message = f"Welcome to the team, <@{user_id}>! Feel free to ask me anything about our project or just say hi!"
+    say(welcome_message, channel=user_id)
+
 
 @app.message("hello")
 def message_hello(message, say):
